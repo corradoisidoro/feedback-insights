@@ -48,6 +48,7 @@ Python 3.14, `uv`, `pytest` (with coverage), `ruff`, `mypy`. Run everything thro
 | `app.py` | Streamlit UI, batch analysis, summary, save button |
 | `database.py` | SQLite schema and queries (`feedback.db`) |
 | `tests/` | pytest suite; 85% coverage gate lives in `pyproject.toml` |
+| `.github/workflows/ci.yml` | CI: ruff, format check, mypy and pytest on push/PR |
 | `.env.example` | Every supported env var with its default |
 
 ## Definition of done

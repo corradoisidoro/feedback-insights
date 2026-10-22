@@ -1,5 +1,17 @@
 # Feedback Insights
 
+[![CI](https://github.com/corradoisidoro/feedback-insights/actions/workflows/ci.yml/badge.svg)](https://github.com/corradoisidoro/feedback-insights/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
+[![Python 3.14](https://img.shields.io/badge/python-3.14-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
+[![uv](https://img.shields.io/badge/managed%20with-uv-DE5FE9.svg)](https://docs.astral.sh/uv/)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![Checked with mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](https://mypy-lang.org/)
+
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B.svg?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Ollama](https://img.shields.io/badge/Ollama-local-black.svg)](https://ollama.com)
+[![SQLite](https://img.shields.io/badge/SQLite-003B57.svg?logo=sqlite&logoColor=white)](https://sqlite.org)
+
 Paste customer reviews into a Streamlit page and get a label, a 1–5 score and a theme for
 each one. Analysis runs locally through [Ollama](https://ollama.com); results can be saved
 to SQLite and reviewed later.
@@ -131,7 +143,8 @@ uv run pytest          # includes the 85% coverage gate
 ```
 
 The test suite uses `streamlit.testing.v1.AppTest` and a stubbed `requests.post`, so no
-network or Ollama instance is needed.
+network or Ollama instance is needed. CI runs the same four checks on every push and pull
+request (`.github/workflows/ci.yml`).
 
 ## Troubleshooting
 
