@@ -3,6 +3,7 @@ name = "feedback-insights"
 version = "0.1.0"
 description = "Streamlit + FastAPI app that turns customer reviews into labels, scores and themes using a local Ollama model."
 readme = "README.md"
+license = "MIT"
 requires-python = ">=3.14"
 dependencies = [
     "fastapi[standard]>=0.159.1",

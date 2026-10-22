@@ -150,3 +150,7 @@ network or Ollama instance is needed.
 - Saved rows have no timestamp, so history order is storage order.
 - The model is asked for one theme word and a fixed label set; it is not validated beyond the
   `Analysis` schema, so unexpected values are shown as-is.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
