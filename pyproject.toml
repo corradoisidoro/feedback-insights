@@ -1,0 +1,48 @@
+[project]
+name = "feedback-insights"
+version = "0.1.0"
+description = "Streamlit + FastAPI app that turns customer reviews into labels, scores and themes using a local Ollama model."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard]>=0.159.1",
+    "ollama>=0.6.3",
+    "openai>=3.36.1",
+    "pydantic>=2.14.1",
+    "python-dotenv>=1.2.4",
+    "requests>=2.34.2",
+    "streamlit>=1.65.0",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.19",
+    "pytest>=9.0",
+    "pytest-cov>=7.0",
+    "ruff>=0.14",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "SIM", "UP"]
+
+[tool.mypy]
+python_version = "3.14"
+files = ["api.py", "app.py", "database.py", "tests"]
+disallow_untyped_defs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = [
+    "--cov=api",
+    "--cov=app",
+    "--cov=database",
+    "--cov-report=term-missing",
+    "--cov-fail-under=85",
+]
